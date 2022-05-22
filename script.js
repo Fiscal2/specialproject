@@ -8,7 +8,7 @@ const wedding = "25 June 2022";
 
 function countdown() {
     const weddingDate = new Date(wedding);
-    const currentDate = new Date();
+    const currentDate = new Date(wedding);
 
     const remSeconds = (weddingDate - currentDate);
     const days = Math.floor(remSeconds / (1000 * 60 * 60 * 24));
@@ -23,7 +23,7 @@ function countdown() {
 
     if(remSeconds < 0){
         clearInterval(countdown);
-        document.getElementById("countdown-container").innerHTML = "TIME TO GET MARRIED!";
+        return finalMessage;
     }
     
 }
