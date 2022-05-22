@@ -1,11 +1,7 @@
-const daysEl = document.getElementById('days');
-const hoursEl = document.getElementById('hours');
-const minutesEl = document.getElementById('minutes');
-const secondsEl = document.getElementById('seconds');
 
-const wedding = "25 June 2022";
 
 function countdown() {
+    const wedding = "25 June 2022";
     const weddingDate = new Date(wedding);
     const currentDate = new Date();
 
@@ -14,6 +10,11 @@ function countdown() {
     const hours = Math.floor((remSeconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((remSeconds % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((remSeconds % (1000 * 60)) / 1000);
+
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
 
     daysEl.innerHTML = days;
     hoursEl.innerHTML = hours;
