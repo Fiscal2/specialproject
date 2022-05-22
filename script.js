@@ -3,12 +3,11 @@ const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 
-
 const wedding = "25 June 2022";
 
 function countdown() {
     const weddingDate = new Date(wedding);
-    const currentDate = new Date(wedding);
+    const currentDate = new Date();
 
     const remSeconds = (weddingDate - currentDate);
     const days = Math.floor(remSeconds / (1000 * 60 * 60 * 24));
@@ -21,9 +20,10 @@ function countdown() {
     minutesEl.innerHTML = minutes;
     secondsEl.innerHTML = seconds;
 
-    if(remSeconds < 0){
+    if(remSeconds <= 0){
         clearInterval(countdown);
-        return finalMessage;
+        finalMessage = document.getElementById('finalMessage');
+        
     }
     
 }
