@@ -22,8 +22,11 @@ function countdown() {
 
     if(remSeconds <= 0){
         clearInterval(countdown);
-        finalMessage = document.getElementById('finalMessage');
-        
+        const finalMessage = document.getElementById('finalMessage');
+        let message = document.createElement('h1');
+        message.innerHTML = "Time to get Married!";
+        div.appendChild('message');
+
     }
     
 }
