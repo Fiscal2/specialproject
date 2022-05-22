@@ -21,8 +21,11 @@ function countdown() {
     minutesEl.innerHTML = minutes;
     secondsEl.innerHTML = seconds;
 
-
-    console.log(seconds);
+    if(remSeconds < 0){
+        clearInterval(countdown);
+        document.getElementById("countdown-container").innerHTML = "TIME TO GET MARRIED!";
+    }
+    
 }
 
 countdown();
