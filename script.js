@@ -1,6 +1,6 @@
 function countdown() {
     const weddingDate = new Date("25 June 2022");
-    const currentDate = new Date(weddingDate);
+    const currentDate = new Date();
 
     const remSeconds = (weddingDate - currentDate);
     // const days = 
