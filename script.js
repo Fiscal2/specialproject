@@ -1,6 +1,6 @@
 function countdown() {
     const weddingDate = new Date("25 June 2022");
-    const currentDate = new Date();
+    const currentDate = new Date(weddingDate);
 
     const remSeconds = (weddingDate - currentDate);
     // const days = 
@@ -19,6 +19,7 @@ function countdown() {
     secondsEl.innerHTML = seconds;
 
     if (remSeconds == 0) {
+        document.body.classList.toggle('final-background');
         clearInterval(countdown);
         const finalMessage = document.getElementById('finalMessage');
         let message = document.createElement('h1');
