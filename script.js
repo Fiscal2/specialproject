@@ -3,7 +3,7 @@
 function countdown() {
     const wedding = "25 June 2022";
     const weddingDate = new Date(wedding);
-    const currentDate = new Date();
+    const currentDate = new Date(wedding);
 
     const remSeconds = (weddingDate - currentDate);
     const days = Math.floor(remSeconds / (1000 * 60 * 60 * 24));
@@ -26,7 +26,7 @@ function countdown() {
         const finalMessage = document.getElementById('finalMessage');
         let message = document.createElement('h1');
         message.innerHTML = "Time to get Married!";
-        div.appendChild('message');
+        finalMessage.appendChild(message);
 
     }
     
