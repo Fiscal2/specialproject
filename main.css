@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
-    background-image: url("./assets/background.jpeg");
+    background-image: var(--bg);
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -31,4 +31,8 @@ body {
 
 .countdown-txt span{
     font-size: 1.5rem;
+}
+
+.wedding-background{
+    --bg: url("./assets/background.jpeg"); 
 }
