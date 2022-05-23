@@ -3,7 +3,7 @@
 function countdown() {
     const wedding = "25 June 2022";
     const weddingDate = new Date(wedding);
-    const currentDate = new Date(wedding);
+    const currentDate = new Date();
 
     const remSeconds = (weddingDate - currentDate);
     const days = Math.floor(remSeconds / (1000 * 60 * 60 * 24));
